@@ -1,0 +1,27 @@
+import java.util.Arrays;
+
+public class SortArray {
+
+    public static void main(String[] args) {
+        
+        int[] arr = {7, 2, 9, 1, 4, 10, 15, 8, 6, 2, 5};
+
+        
+        Arrays.sort(arr);
+
+        
+        System.out.println("Array in Ascending Order: " + Arrays.toString(arr));
+
+        
+        // Create a temporary array to store elements in reverse order
+        int[] arrDesc = new int[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            arrDesc[i] = arr[arr.length - 1 - i];
+            // This line copies elements from the original array 'arr' to the new array 'arrDesc'but in reverse order. 
+
+        }
+
+        
+        System.out.println("Array in Descending Order: " + Arrays.toString(arrDesc));
+    }
+}
